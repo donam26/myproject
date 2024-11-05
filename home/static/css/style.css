@@ -1427,3 +1427,13 @@ a {
   cursor: zoom-in; }
   .img-opacity:hover img {
     opacity: .5; }
+.logout-button {
+  background-color: none !important;
+  border: none;
+}
+.p-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}

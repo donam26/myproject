@@ -2,11 +2,11 @@ from django.contrib import admin
 from django.urls import path
 from home import views as home
 from admin_custom import views as admin_custom
+from django.contrib.auth.decorators import login_required, user_passes_test
 
 urlpatterns = [
-    path('admin/', admin.site.urls),  # Đảm bảo dòng này có mặt
+    path('admin/', admin.site.urls), 
     path('admin_dashboard/', admin_custom.admin_dashboard, name='admin_dashboard'), 
-    # path('admin_dashboard/users/', admin_custom.admin_users, name='admin_users'),
 
 
     path('', home.get_home, name='home'),
