@@ -3,9 +3,8 @@
 <html
   lang="vi-VN"
   id="internal_page"
-  class="page-template page-template-template-rooms page-template-template-rooms-php page page-id-33 page-parent internal_page lang_vi"
+  class="page-template page-template-template-restaurant page-template-template-restaurant-php page page-id-83 page-parent internal_page lang_vi"
 >
-  <!--<![endif]-->
   <head>
     <meta charset="UTF-8" />
     <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -15,7 +14,13 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
     />
     <meta name="format-detection" content="telephone=no" />
-    <!-- WORDPRESS HEAD ADDITIONALS -->
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Work+Sans:300,400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css'  %}" />
+
     <script type="text/javascript">
       var theme_url =
         "https://hanoihotel.com.vn/wp-content/themes/pro-theme-munich";
@@ -196,26 +201,20 @@
       var watch_video = "Watch the video";
       var sspeed = "";
       var stimeout = "";
-      // F -> MM
-      // Y -> yy
-      // d -> dd
+
       var date_format = "dd MM yy";
     </script>
 
     <script>
-      var slideshow_height = "100vh";
+      var slideshow_height = "70vh";
       var currency = "VND";
     </script>
-    <title>HẠNG PHÒNG Khách sạn - Hanoi Hotel</title>
+    <title>ẨM THỰC Khách sạn - Hanoi Hotel</title>
     <meta
       name="description"
-      content="HẠNG PHÒNG Hanoi Hotel   ... Đặt phòng  của khách sạn tại."
+      content="ẨM THỰC Hanoi Hotel   ... Đặt phòng  của khách sạn tại."
     />
     <script type="text/javascript">
-      /* GA TRACKER */
-
-      /* Fb nb delay */
-
       var FB_nb_day_delay = 0;
     </script>
 
@@ -227,9 +226,7 @@
         margin-top: 0px !important;
       }
     </style>
-    <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+
     <script no-loader>
       /* Added by mu-plugin gmaps_keys_api_client.php */ var fb__website_gmap_api_key =
         "AIzaSyDDOq-l9r24XkM_GUqTDrlWyDAGWOs22xE";
@@ -376,7 +373,7 @@
         deglobal_theme: "pro-theme-munich",
         deglobal_type: "legacy_template",
         deglobal_language: "vi",
-        deglobal_page_type: "rooms",
+        deglobal_page_type: "restaurant",
         deglobal_be_type: "fbk",
         deglobal_be_hotel_id: "vnhan19198",
         deglobal_be_group_id: "not_detected",
@@ -407,78 +404,75 @@
     <!-- This site is optimized with the Yoast SEO plugin v22.3 - https://yoast.com/wordpress/plugins/seo/ -->
     <meta
       name="description"
-      content="Khách sạn Hà Nội nổi tiếng với sự đa dạng về dịch vụ, hệ thống phòng sang trọng và tiện nghi, mang đến trải nghiệm tuyệt vời cho mỗi vị khách."
+      content="Khám phá thế giới ẩm thực tại Hanoi Hotel với đa dạng hương vị từ ẩm thực Quảng Đông, Hồng Kông và đặc biệt là những mỹ vị Dimsum trứ danh."
     />
-    <link rel="canonical" href="https://hanoihotel.com.vn/vi/accommodation/" />
+    <link rel="canonical" href="https://hanoihotel.com.vn/vi/dining/" />
     <meta property="og:locale" content="vi_VN" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="HẠNG PHÒNG - Hanoi Hotel" />
+    <meta property="og:title" content="ẨM THỰC - Hanoi Hotel" />
     <meta
       property="og:description"
-      content="Khách sạn Hà Nội nổi tiếng với sự đa dạng về dịch vụ, hệ thống phòng sang trọng và tiện nghi, mang đến trải nghiệm tuyệt vời cho mỗi vị khách."
+      content="Khám phá thế giới ẩm thực tại Hanoi Hotel với đa dạng hương vị từ ẩm thực Quảng Đông, Hồng Kông và đặc biệt là những mỹ vị Dimsum trứ danh."
     />
-    <meta
-      property="og:url"
-      content="https://hanoihotel.com.vn/vi/accommodation/"
-    />
+    <meta property="og:url" content="https://hanoihotel.com.vn/vi/dining/" />
     <meta property="og:site_name" content="Hanoi Hotel" />
     <meta
       property="article:modified_time"
-      content="2024-10-22T07:04:59+00:00"
+      content="2024-10-25T08:41:56+00:00"
     />
     <meta
       property="og:image"
-      content="https://hanoihotel.com.vn/wp-content/uploads/sites/97/2022/05/hanoi-hotel19015.jpg"
+      content="https://hanoihotel.com.vn/wp-content/uploads/sites/97/2024/10/ds5.jpg"
     />
-    <meta property="og:image:width" content="1798" />
+    <meta property="og:image:width" content="1600" />
     <meta property="og:image:height" content="1200" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:label1" content="Est. reading time" />
-    <meta name="twitter:data1" content="1 minute" />
+    <meta name="twitter:data1" content="2 minutes" />
     <script type="application/ld+json" class="yoast-schema-graph">
       {
         "@context": "https://schema.org",
         "@graph": [
           {
             "@type": "WebPage",
-            "@id": "https://hanoihotel.com.vn/vi/accommodation/",
-            "url": "https://hanoihotel.com.vn/vi/accommodation/",
-            "name": "HẠNG PHÒNG - Hanoi Hotel",
+            "@id": "https://hanoihotel.com.vn/vi/dining/",
+            "url": "https://hanoihotel.com.vn/vi/dining/",
+            "name": "ẨM THỰC - Hanoi Hotel",
             "isPartOf": { "@id": "https://hanoihotel.com.vn/vi/#website" },
             "primaryImageOfPage": {
-              "@id": "https://hanoihotel.com.vn/vi/accommodation/#primaryimage"
+              "@id": "https://hanoihotel.com.vn/vi/dining/#primaryimage"
             },
             "image": {
-              "@id": "https://hanoihotel.com.vn/vi/accommodation/#primaryimage"
+              "@id": "https://hanoihotel.com.vn/vi/dining/#primaryimage"
             },
-            "thumbnailUrl": "https://hanoihotel.com.vn/wp-content/uploads/sites/97/2022/05/hanoi-hotel19015.jpg",
-            "datePublished": "2020-04-01T06:40:57+00:00",
-            "dateModified": "2024-10-22T07:04:59+00:00",
-            "description": "Khách sạn Hà Nội nổi tiếng với sự đa dạng về dịch vụ, hệ thống phòng sang trọng và tiện nghi, mang đến trải nghiệm tuyệt vời cho mỗi vị khách.",
+            "thumbnailUrl": "https://hanoihotel.com.vn/wp-content/uploads/sites/97/2024/10/ds5.jpg",
+            "datePublished": "2020-04-02T09:29:19+00:00",
+            "dateModified": "2024-10-25T08:41:56+00:00",
+            "description": "Khám phá thế giới ẩm thực tại Hanoi Hotel với đa dạng hương vị từ ẩm thực Quảng Đông, Hồng Kông và đặc biệt là những mỹ vị Dimsum trứ danh.",
             "breadcrumb": {
-              "@id": "https://hanoihotel.com.vn/vi/accommodation/#breadcrumb"
+              "@id": "https://hanoihotel.com.vn/vi/dining/#breadcrumb"
             },
             "inLanguage": "vi-VN",
             "potentialAction": [
               {
                 "@type": "ReadAction",
-                "target": ["https://hanoihotel.com.vn/vi/accommodation/"]
+                "target": ["https://hanoihotel.com.vn/vi/dining/"]
               }
             ]
           },
           {
             "@type": "ImageObject",
             "inLanguage": "vi-VN",
-            "@id": "https://hanoihotel.com.vn/vi/accommodation/#primaryimage",
-            "url": "https://hanoihotel.com.vn/wp-content/uploads/sites/97/2022/05/hanoi-hotel19015.jpg",
-            "contentUrl": "https://hanoihotel.com.vn/wp-content/uploads/sites/97/2022/05/hanoi-hotel19015.jpg",
-            "width": 1798,
+            "@id": "https://hanoihotel.com.vn/vi/dining/#primaryimage",
+            "url": "https://hanoihotel.com.vn/wp-content/uploads/sites/97/2024/10/ds5.jpg",
+            "contentUrl": "https://hanoihotel.com.vn/wp-content/uploads/sites/97/2024/10/ds5.jpg",
+            "width": 1600,
             "height": 1200
           },
           {
             "@type": "BreadcrumbList",
-            "@id": "https://hanoihotel.com.vn/vi/accommodation/#breadcrumb",
+            "@id": "https://hanoihotel.com.vn/vi/dining/#breadcrumb",
             "itemListElement": [
               {
                 "@type": "ListItem",
@@ -486,7 +480,7 @@
                 "name": "Home",
                 "item": "https://hanoihotel.com.vn/vi/"
               },
-              { "@type": "ListItem", "position": 2, "name": "HẠNG PHÒNG" }
+              { "@type": "ListItem", "position": 2, "name": "ẨM THỰC" }
             ]
           },
           {
@@ -515,14 +509,394 @@
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
     <link rel="dns-prefetch" href="//websdk.fastbooking-services.com" />
-    
+    <style id="classic-theme-styles-inline-css" type="text/css">
+      /*! This file is auto-generated */
+      .wp-block-button__link {
+        color: #fff;
+        background-color: #32373c;
+        border-radius: 9999px;
+        box-shadow: none;
+        text-decoration: none;
+        padding: calc(0.667em + 2px) calc(1.333em + 2px);
+        font-size: 1.125em;
+      }
+      .wp-block-file__button {
+        background: #32373c;
+        color: #fff;
+        text-decoration: none;
+      }
+    </style>
     <style id="global-styles-inline-css" type="text/css">
+      body {
+        --wp--preset--color--black: #000000;
+        --wp--preset--color--cyan-bluish-gray: #abb8c3;
+        --wp--preset--color--white: #ffffff;
+        --wp--preset--color--pale-pink: #f78da7;
+        --wp--preset--color--vivid-red: #cf2e2e;
+        --wp--preset--color--luminous-vivid-orange: #ff6900;
+        --wp--preset--color--luminous-vivid-amber: #fcb900;
+        --wp--preset--color--light-green-cyan: #7bdcb5;
+        --wp--preset--color--vivid-green-cyan: #00d084;
+        --wp--preset--color--pale-cyan-blue: #8ed1fc;
+        --wp--preset--color--vivid-cyan-blue: #0693e3;
+        --wp--preset--color--vivid-purple: #9b51e0;
+        --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(
+          135deg,
+          rgba(6, 147, 227, 1) 0%,
+          rgb(155, 81, 224) 100%
+        );
+        --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(
+          135deg,
+          rgb(122, 220, 180) 0%,
+          rgb(0, 208, 130) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(
+          135deg,
+          rgba(252, 185, 0, 1) 0%,
+          rgba(255, 105, 0, 1) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(
+          135deg,
+          rgba(255, 105, 0, 1) 0%,
+          rgb(207, 46, 46) 100%
+        );
+        --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(
+          135deg,
+          rgb(238, 238, 238) 0%,
+          rgb(169, 184, 195) 100%
+        );
+        --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(
+          135deg,
+          rgb(74, 234, 220) 0%,
+          rgb(151, 120, 209) 20%,
+          rgb(207, 42, 186) 40%,
+          rgb(238, 44, 130) 60%,
+          rgb(251, 105, 98) 80%,
+          rgb(254, 248, 76) 100%
+        );
+        --wp--preset--gradient--blush-light-purple: linear-gradient(
+          135deg,
+          rgb(255, 206, 236) 0%,
+          rgb(152, 150, 240) 100%
+        );
+        --wp--preset--gradient--blush-bordeaux: linear-gradient(
+          135deg,
+          rgb(254, 205, 165) 0%,
+          rgb(254, 45, 45) 50%,
+          rgb(107, 0, 62) 100%
+        );
+        --wp--preset--gradient--luminous-dusk: linear-gradient(
+          135deg,
+          rgb(255, 203, 112) 0%,
+          rgb(199, 81, 192) 50%,
+          rgb(65, 88, 208) 100%
+        );
+        --wp--preset--gradient--pale-ocean: linear-gradient(
+          135deg,
+          rgb(255, 245, 203) 0%,
+          rgb(182, 227, 212) 50%,
+          rgb(51, 167, 181) 100%
+        );
+        --wp--preset--gradient--electric-grass: linear-gradient(
+          135deg,
+          rgb(202, 248, 128) 0%,
+          rgb(113, 206, 126) 100%
+        );
+        --wp--preset--gradient--midnight: linear-gradient(
+          135deg,
+          rgb(2, 3, 129) 0%,
+          rgb(40, 116, 252) 100%
+        );
+        --wp--preset--font-size--small: 13px;
+        --wp--preset--font-size--medium: 20px;
+        --wp--preset--font-size--large: 36px;
+        --wp--preset--font-size--x-large: 42px;
+        --wp--preset--spacing--20: 0.44rem;
+        --wp--preset--spacing--30: 0.67rem;
+        --wp--preset--spacing--40: 1rem;
+        --wp--preset--spacing--50: 1.5rem;
+        --wp--preset--spacing--60: 2.25rem;
+        --wp--preset--spacing--70: 3.38rem;
+        --wp--preset--spacing--80: 5.06rem;
+        --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+        --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1),
+          6px 6px rgba(0, 0, 0, 1);
+        --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+      }
+      :where(.is-layout-flex) {
+        gap: 0.5em;
+      }
+      :where(.is-layout-grid) {
+        gap: 0.5em;
+      }
+      body .is-layout-flow > .alignleft {
+        float: left;
+        margin-inline-start: 0;
+        margin-inline-end: 2em;
+      }
+      body .is-layout-flow > .alignright {
+        float: right;
+        margin-inline-start: 2em;
+        margin-inline-end: 0;
+      }
+      body .is-layout-flow > .aligncenter {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      body .is-layout-constrained > .alignleft {
+        float: left;
+        margin-inline-start: 0;
+        margin-inline-end: 2em;
+      }
+      body .is-layout-constrained > .alignright {
+        float: right;
+        margin-inline-start: 2em;
+        margin-inline-end: 0;
+      }
+      body .is-layout-constrained > .aligncenter {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      body
+        .is-layout-constrained
+        > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+        max-width: var(--wp--style--global--content-size);
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      body .is-layout-constrained > .alignwide {
+        max-width: var(--wp--style--global--wide-size);
+      }
+      body .is-layout-flex {
+        display: flex;
+      }
+      body .is-layout-flex {
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      body .is-layout-flex > * {
+        margin: 0;
+      }
+      body .is-layout-grid {
+        display: grid;
+      }
+      body .is-layout-grid > * {
+        margin: 0;
+      }
+      :where(.wp-block-columns.is-layout-flex) {
+        gap: 2em;
+      }
+      :where(.wp-block-columns.is-layout-grid) {
+        gap: 2em;
+      }
+      :where(.wp-block-post-template.is-layout-flex) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-post-template.is-layout-grid) {
+        gap: 1.25em;
+      }
+      .has-black-color {
+        color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-color {
+        color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-color {
+        color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-color {
+        color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-color {
+        color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-color {
+        color: var(--wp--preset--color--luminous-vivid-orange) !important;
+      }
+      .has-luminous-vivid-amber-color {
+        color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-color {
+        color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-color {
+        color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-color {
+        color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-color {
+        color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-color {
+        color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-background-color {
+        background-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-background-color {
+        background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-background-color {
+        background-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-background-color {
+        background-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-background-color {
+        background-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-amber-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-amber
+        ) !important;
+      }
+      .has-light-green-cyan-background-color {
+        background-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-background-color {
+        background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-background-color {
+        background-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-border-color {
+        border-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-border-color {
+        border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-border-color {
+        border-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-border-color {
+        border-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-border-color {
+        border-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-border-color {
+        border-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-amber-border-color {
+        border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-border-color {
+        border-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-border-color {
+        border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-border-color {
+        border-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+        background: var(
+          --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple
+        ) !important;
+      }
+      .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+        background: var(
+          --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan
+        ) !important;
+      }
+      .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-orange-to-vivid-red
+        ) !important;
+      }
+      .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+        background: var(
+          --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray
+        ) !important;
+      }
+      .has-cool-to-warm-spectrum-gradient-background {
+        background: var(
+          --wp--preset--gradient--cool-to-warm-spectrum
+        ) !important;
+      }
+      .has-blush-light-purple-gradient-background {
+        background: var(--wp--preset--gradient--blush-light-purple) !important;
+      }
+      .has-blush-bordeaux-gradient-background {
+        background: var(--wp--preset--gradient--blush-bordeaux) !important;
+      }
+      .has-luminous-dusk-gradient-background {
+        background: var(--wp--preset--gradient--luminous-dusk) !important;
+      }
+      .has-pale-ocean-gradient-background {
+        background: var(--wp--preset--gradient--pale-ocean) !important;
+      }
+      .has-electric-grass-gradient-background {
+        background: var(--wp--preset--gradient--electric-grass) !important;
+      }
+      .has-midnight-gradient-background {
+        background: var(--wp--preset--gradient--midnight) !important;
+      }
+      .has-small-font-size {
+        font-size: var(--wp--preset--font-size--small) !important;
+      }
+      .has-medium-font-size {
+        font-size: var(--wp--preset--font-size--medium) !important;
+      }
+      .has-large-font-size {
+        font-size: var(--wp--preset--font-size--large) !important;
+      }
+      .has-x-large-font-size {
+        font-size: var(--wp--preset--font-size--x-large) !important;
+      }
+      .wp-block-navigation a:where(:not(.wp-element-button)) {
+        color: inherit;
+      }
+      :where(.wp-block-post-template.is-layout-flex) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-post-template.is-layout-grid) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-columns.is-layout-flex) {
+        gap: 2em;
+      }
+      :where(.wp-block-columns.is-layout-grid) {
+        gap: 2em;
+      }
+      .wp-block-pullquote {
+        font-size: 1.5em;
+        line-height: 1.6;
+      }
+
       .site-navbar-wrap {
         z-index: 9000 !important;
       }
-      
     </style>
-     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" />
     <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}" />
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />
@@ -534,6 +908,15 @@
     <link rel="stylesheet" href="{% static 'css/animate.css' %}" />
     <link rel="stylesheet" href="{% static 'css/aos.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'fonts/flaticon/font/flaticon.css' %}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css"
+    />
     <link
       rel="stylesheet"
       id="wpml-blocks-css"
@@ -591,7 +974,60 @@
       src="https://hanoihotel.com.vn/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.2"
       id="jquery-ui-datepicker-js"
     ></script>
-   
+    <script type="text/javascript" id="jquery-ui-datepicker-js-after">
+      /* <![CDATA[ */
+      jQuery(function (jQuery) {
+        jQuery.datepicker.setDefaults({
+          closeText: "Close",
+          currentText: "Today",
+          monthNames: [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December",
+          ],
+          monthNamesShort: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+          nextText: "Next",
+          prevText: "Previous",
+          dayNames: [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ],
+          dayNamesShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+          dayNamesMin: ["S", "M", "T", "W", "T", "F", "S"],
+          dateFormat: "MM d, yy",
+          firstDay: 1,
+          isRTL: false,
+        });
+      });
+      /* ]]> */
+    </script>
     <script
       type="text/javascript"
       src="https://hanoihotel.com.vn/wp-content/themes/pro-theme-munich/js/libraries.min.js#loaddefer"
@@ -609,10 +1045,21 @@
     <link
       rel="alternate"
       type="application/json"
-      href="https://hanoihotel.com.vn/vi/wp-json/wp/v2/pages/33"
+      href="https://hanoihotel.com.vn/vi/wp-json/wp/v2/pages/83"
     />
-    <link rel="shortlink" href="https://hanoihotel.com.vn/vi/?p=33" />
-   
+    <link rel="shortlink" href="https://hanoihotel.com.vn/vi/?p=83" />
+    <!--[if IE]>
+      <style>
+        #widgets--wrapper > div > div.fwb-cal-bottom--group,
+        #widget_wrapper .fbw-calendar--dates,
+        .fbw-calendar--config fieldset {
+          min-height: auto;
+          flex-grow: 0;
+          flex-shrink: 1;
+          flex-basis: auto;
+        }
+      </style>
+    <![endif]-->
     <link
       rel="icon"
       href="https://hanoihotel.com.vn/wp-content/uploads/sites/97/2020/09/cropped-Logo-Hanoihotel-32x32.png"
@@ -633,74 +1080,50 @@
     />
   </head>
   <body
-    class="page-template page-template-template-rooms page-template-template-rooms-php page page-id-33 page-parent rooms default"
+    class="page-template page-template-template-restaurant page-template-template-restaurant-php page page-id-83 page-parent default"
   >
-  {% include 'includes/header.html' %}
+    {% include 'includes/header.html' %}
 
     <div
-      class="slideshow_container page-template page-template-template-rooms page-template-template-rooms-php page page-id-33 page-parent rooms default"
+      class="slideshow_container page-template page-template-template-restaurant page-template-template-restaurant-php page page-id-83 page-parent default"
     >
       <div class="slideshow">
         <script type="text/javascript">
           var sshow_image_data = [
             {
-              ID: 27,
+              ID: 913,
               url_set: {
-                400: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/04\/hanoi-hotel18959.jpg",
-                600: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/04\/hanoi-hotel18959.jpg",
-                992: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/04\/hanoi-hotel18959-992x541.jpg",
-                1200: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/04\/hanoi-hotel18959-1200x654.jpg",
-                max: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/04\/hanoi-hotel18959.jpg",
+                400: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/Golden-Dragon-Restaurant-3.jpg",
+                600: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/Golden-Dragon-Restaurant-3.jpg",
+                992: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/Golden-Dragon-Restaurant-3-992x541.jpg",
+                1200: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/Golden-Dragon-Restaurant-3-1200x654.jpg",
+                max: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/Golden-Dragon-Restaurant-3.jpg",
                 default:
-                  "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/04\/hanoi-hotel18959-1200x654.jpg",
+                  "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/Golden-Dragon-Restaurant-3-1200x654.jpg",
               },
             },
             {
-              ID: 743,
+              ID: 919,
               url_set: {
-                400: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/DSC_0912.jpg",
-                600: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/DSC_0912.jpg",
-                992: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/DSC_0912-992x541.jpg",
-                1200: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/DSC_0912-1200x654.jpg",
-                max: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/DSC_0912.jpg",
+                400: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/Golden-Dragon-Restaurant-6.jpg",
+                600: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/Golden-Dragon-Restaurant-6.jpg",
+                992: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/Golden-Dragon-Restaurant-6-992x541.jpg",
+                1200: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/Golden-Dragon-Restaurant-6-1200x654.jpg",
+                max: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/Golden-Dragon-Restaurant-6.jpg",
                 default:
-                  "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/DSC_0912-1200x654.jpg",
+                  "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/Golden-Dragon-Restaurant-6-1200x654.jpg",
               },
             },
             {
-              ID: 750,
+              ID: 932,
               url_set: {
-                400: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/DSC_0998.jpg",
-                600: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/DSC_0998.jpg",
-                992: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/DSC_0998-992x541.jpg",
-                1200: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/DSC_0998-1200x654.jpg",
-                max: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/DSC_0998.jpg",
+                400: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/4.-Food-Centre-1.jpg",
+                600: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/4.-Food-Centre-1.jpg",
+                992: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/4.-Food-Centre-1-992x541.jpg",
+                1200: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/4.-Food-Centre-1-1200x654.jpg",
+                max: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/4.-Food-Centre-1.jpg",
                 default:
-                  "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/DSC_0998-1200x654.jpg",
-              },
-            },
-            {
-              ID: 31,
-              url_set: {
-                400: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/04\/hanoi-hotel19039-man-den.jpg",
-                600: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/04\/hanoi-hotel19039-man-den.jpg",
-                992: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/04\/hanoi-hotel19039-man-den-992x541.jpg",
-                1200: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/04\/hanoi-hotel19039-man-den-1200x654.jpg",
-                max: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/04\/hanoi-hotel19039-man-den.jpg",
-                default:
-                  "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/04\/hanoi-hotel19039-man-den-1200x654.jpg",
-              },
-            },
-            {
-              ID: 503,
-              url_set: {
-                400: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/10\/hanoi-hotel19023-scaled.jpg",
-                600: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/10\/hanoi-hotel19023-scaled.jpg",
-                992: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/10\/hanoi-hotel19023-992x541.jpg",
-                1200: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/10\/hanoi-hotel19023-1200x654.jpg",
-                max: "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/10\/hanoi-hotel19023-scaled.jpg",
-                default:
-                  "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2020\/10\/hanoi-hotel19023-1200x654.jpg",
+                  "https:\/\/hanoihotel.com.vn\/wp-content\/uploads\/sites\/97\/2024\/10\/4.-Food-Centre-1-1200x654.jpg",
               },
             },
           ];
@@ -717,27 +1140,27 @@
         <style type="text/css">
           @media only screen and (min-width: 1200px) {
             .loading_sshow {
-              background-image: url(https://hanoihotel.com.vn/wp-content/uploads/sites/97/2020/04/hanoi-hotel18959.jpg);
+              background-image: url(https://hanoihotel.com.vn/wp-content/uploads/sites/97/2024/10/Golden-Dragon-Restaurant-3.jpg);
             }
           }
           @media only screen and (max-width: 1200px) {
             .loading_sshow {
-              background-image: url(https://hanoihotel.com.vn/wp-content/uploads/sites/97/2020/04/hanoi-hotel18959-1200x654.jpg);
+              background-image: url(https://hanoihotel.com.vn/wp-content/uploads/sites/97/2024/10/Golden-Dragon-Restaurant-3-1200x654.jpg);
             }
           }
           @media only screen and (max-width: 992px) {
             .loading_sshow {
-              background-image: url(https://hanoihotel.com.vn/wp-content/uploads/sites/97/2020/04/hanoi-hotel18959-992x541.jpg);
+              background-image: url(https://hanoihotel.com.vn/wp-content/uploads/sites/97/2024/10/Golden-Dragon-Restaurant-3-992x541.jpg);
             }
           }
           @media only screen and (max-width: 600px) {
             .loading_sshow {
-              background-image: url(https://hanoihotel.com.vn/wp-content/uploads/sites/97/2020/04/hanoi-hotel18959.jpg);
+              background-image: url(https://hanoihotel.com.vn/wp-content/uploads/sites/97/2024/10/Golden-Dragon-Restaurant-3.jpg);
             }
           }
           @media only screen and (max-width: 400px) {
             .loading_sshow {
-              background-image: url(https://hanoihotel.com.vn/wp-content/uploads/sites/97/2020/04/hanoi-hotel18959.jpg);
+              background-image: url(https://hanoihotel.com.vn/wp-content/uploads/sites/97/2024/10/Golden-Dragon-Restaurant-3.jpg);
             }
           }
         </style>
@@ -745,12 +1168,9 @@
       </div>
       <div class="slide_overlay">
         <div class="slide_content">
-          <div class="slide_content_text">
-            <div class="title">Rooms & Suites</div>
-          </div>
+          <div class="slide_content_text"></div>
         </div>
       </div>
-      <!-- Submenu pages -->
     </div>
     <div id="booking_form_wrap" class="booking_form_wrap none clearfix">
       <div id="booking_form_box" class="booking_form_box clearfix">
@@ -883,11 +1303,9 @@
             id="mobile_langs"
             onchange="if (this.value) window.location.href=this.value"
           >
-            <option value="https://hanoihotel.com.vn/accommodation/">
-              English
-            </option>
+            <option value="https://hanoihotel.com.vn/dining/">English</option>
             <option
-              value="https://hanoihotel.com.vn/vi/accommodation/"
+              value="https://hanoihotel.com.vn/vi/dining/"
               selected="selected"
             >
               Tiếng Việt
@@ -905,11 +1323,9 @@
                 >
               </li>
               <li
-                class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-33 current_page_item menu-item-has-children menu-item-39"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-39"
               >
-                <a
-                  href="https://hanoihotel.com.vn/vi/accommodation/"
-                  aria-current="page"
+                <a href="https://hanoihotel.com.vn/vi/accommodation/"
                   >HẠNG PHÒNG</a
                 >
                 <ul class="sub-menu">
@@ -964,9 +1380,13 @@
                 </ul>
               </li>
               <li
-                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-118"
+                class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-83 current_page_item menu-item-has-children menu-item-118"
               >
-                <a href="https://hanoihotel.com.vn/vi/dining/">ẨM THỰC</a>
+                <a
+                  href="https://hanoihotel.com.vn/vi/dining/"
+                  aria-current="page"
+                  >ẨM THỰC</a
+                >
                 <ul class="sub-menu">
                   <li
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119"
@@ -1035,76 +1455,31 @@
         <span>Book a stay</span>
       </a>
     </div>
+    {% for service in services %}
+
     <main id="page">
       <!-- CONTENT index-->
-      <div id="intro" class="clearfix container rooms">
+      <div id="intro" class="clearfix container">
         <div
           id="thumbnail"
           class="lazy hidden-xs hidden-sm"
-          data-bg="https://hanoihotel.com.vn/wp-content/uploads/sites/97/2020/10/hanoi-hotel19015-scaled.jpg"
+          data-bg="{{ service.image.url }}"
         ></div>
         <div
           id="second_thumbnail"
           class="lazy hidden-xs hidden-sm"
-          data-bg="https://hanoihotel.com.vn/wp-content/uploads/sites/97/2024/10/DSC_1040.jpg"
+          data-bg="https://hanoihotel.com.vn/wp-content/uploads/sites/97/2020/04/DSC_0605.jpg"
         ></div>
         <div class="page_content_wrap with_thumbs">
           <div class="page_content">
-            <h1 class="the_title">HẠNG PHÒNG</h1>
-            <p>
-              Tọa lạc giữa lòng thủ đô sôi động và náo nhiệt, Khách sạn Hà Nội
-              được đông đảo du khách trong nước và quốc tế biết đến với hệ thống
-              phòng nghỉ sang trọng, tiện nghi kết hợp cùng phong cách bài trí
-              độc đáo và sự đa dạng về dịch vụ, mang đến những trải nghiệm tuyệt
-              vời cho mỗi vị khách, dù là khách thương gia hay du lịch nghỉ
-              dưỡng.
-            </p>
+            <h1 class="the_title">{{ service.name }}</h1>
+            <p>{{ service.description }}</p>
           </div>
         </div>
       </div>
     </main>
-    <!-- CHILDREN rooms -->
-    <div id="preview_rooms" class="section">
-      <div class="container-fluid">
-        <div class="row clearfix">
-          <div id="single_room_38" class="child_wrap clearfix websdk-room">
-            <a
-              id="thumb"
-              class="lazy"
-              href="https://hanoihotel.com.vn/vi/accommodation/deluxe-room/"
-              data-bg="https://hanoihotel.com.vn/wp-content/uploads/sites/97/2022/05/anh-1-1000x563.jpg"
-            ></a>
-            <div class="child_content_wrap">
-              <div class="child_content page_content">
-                <a
-                  class="title"
-                  href="https://hanoihotel.com.vn/vi/accommodation/deluxe-room/"
-                >
-                  Phòng Deluxe
-                </a>
-                <div class="occupancy">
-                  <span class="label">Maximum occupation:</span>
-                  <span class="text"
-                    ><span class="tot">2 People</span>
-                    <span class="det">(2 Adults / 1 Children)</span>
-                  </span>
-                </div>
-                <div class="description">
-                  <p>
-                    Phòng Deluxe được thiết kế với phong cách bày trí tinh tế
-                    cùng hướng nhìn ra hồ Giảng Võ thơ mộng, yên tĩnh tạo cho
-                    Quý khách cảm giác thư&hellip;
-                  </p>
-                </div>
+    {% endfor %}
 
-              </div>
-            </div>
-          </div>
-        
-        </div>
-      </div>
-    </div>
-   
     <div class="system">
       <script
         type="text/javascript"
@@ -1183,5 +1558,4 @@
     </div>
   </body>
   {% include 'includes/footer.html' %}
-
 </html>

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect , get_object_or_404
-from admin_custom.models import Room
+from admin_custom.models import Room, Post, Service
 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login  
@@ -15,11 +15,16 @@ def get_home(request):
 def get_about(request):
     return render(request, 'about.html')
 def get_event(request):
-    return render(request, 'event.html')
+    events = Post.objects.all() 
+    return render(request, 'event.html', {'events': events})
 def get_room(request):
-    return render(request, 'room.html')
+    rooms = Room.objects.all() 
+    return render(request, 'room.html', {'rooms': rooms})
 def get_contact(request):
     return render(request, 'contact.html')
+def get_service(request):
+    services = Service.objects.all() 
+    return render(request, 'service.html', {'services': services})
 
 def user_login(request):
     if request.method == 'POST':

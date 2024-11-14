@@ -76,3 +76,9 @@ body.custom-login {
         width: 90%;
     }
 }
+
+
+.site-navbar-wrap {
+    z-index: 9000;
+}
+

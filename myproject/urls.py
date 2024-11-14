@@ -26,7 +26,7 @@ urlpatterns = [
     path('room/delete/<int:room_id>/', admin_custom.delete_room, name='delete_room'),
 
     path('', home.get_home, name='home'),
-    path('contact', home.get_contact),
+    path('service', home.get_service),
     path('about', home.get_about),
     path('event', home.get_event),
     path('room', home.get_room, name='room_list'),
