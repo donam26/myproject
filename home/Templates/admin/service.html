@@ -29,7 +29,14 @@
 
     <!-- Template Main CSS File -->
     <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
+
+    <style>
+      .created-column {
+        width: 150px; /* Hoặc điều chỉnh theo ý bạn */
+      }
+    </style>
   </head>
+
 
   <body>
     {% include 'includes/admin/header.html' %}
@@ -107,6 +114,7 @@
                     <th>Giá</th>
                     <th>Mô Tả</th>
                     <th>Ảnh Dịch Vụ</th> 
+                    <th class="created-column">Ngày tạo</th>
                     <th>Hành Động</th>
                   </tr>
                 </thead>
@@ -124,6 +132,14 @@
                             <img src="{% static 'images/default_service.jpg' %}" alt="Service Image" width="100">
                         {% endif %}
                       </td>
+                      <td>
+                        {% if service.status == 'approved' %}
+                          <span class="badge bg-success">Approved</span>
+                        {% else %}
+                          <span class="badge bg-warning">Pending</span>
+                        {% endif %}
+                      </td>
+                      <td>{{ service.created_at|date:"d-m-Y H:i" }}</td>
                       <td>
                         <!-- Nút Sửa -->
                         <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editServiceModal{{ service.id }}">Sửa</button>

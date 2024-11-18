@@ -17,7 +17,7 @@ urlpatterns = [
     path('admin_dashboard/services/edit_service/<int:service_id>/', admin_custom.edit_service, name='edit_service'),
     path('admin_dashboard/gifts', admin_custom.admin_gift, name='admin_gift'),  
     path('admin_dashboard/gifts/delete/<int:id>/', admin_custom.delete_gift, name='delete_gift'),
-    path('admin_dashboard/gifts/edit_gift/<int:service_id>/', admin_custom.edit_gift, name='edit_gift'),
+    path('admin_dashboard/gifts/edit_gift/<int:gift_id>/', admin_custom.edit_gift, name='edit_gift'),
     path('admin_dashboard/posts', admin_custom.admin_post, name='admin_post'),  
     path('admin_dashboard/posts/delete/<int:post_id>/', admin_custom.delete_post, name='delete_post'),
     path('admin_dashboard/posts/edit_post/<int:post_id>/', admin_custom.edit_post, name='edit_post'),
@@ -26,13 +26,21 @@ urlpatterns = [
     path('room/delete/<int:room_id>/', admin_custom.delete_room, name='delete_room'),
 
     path('', home.get_home, name='home'),
-    path('service', home.get_service),
-    path('about', home.get_about),
-    path('event', home.get_event),
+    path('service', home.get_service, name='service'),
+    path('about', home.get_about, name='about'),
+    path('event', home.get_event, name='event'),
+    path('gift', home.get_gift, name='gift'),
+    path('room', home.get_room, name='room_list'),
+    # path('room/suite', home.get_room_suite, name='room_list_suite'),
+    # path('room/deluxe', home.get_room_deluxe, name='room_list_deluxe'),
     path('room', home.get_room, name='room_list'),
     path('room/<int:room_id>/', home.room_detail, name='room_detail'),      
     path('login/', home.user_login, name='login'),
     path('register/', home.user_register, name='register'),
+    path('add-comment/', home.add_comment, name='add_comment'),
+    path('room/<str:room_type>/', home.rooms_by_type, name='rooms_by_type'),
+    path('logout/', home.user_logout, name='logout'),  # Đường dẫn logout
+
 ]
 
 

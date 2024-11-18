@@ -1,6 +1,5 @@
 {% load static %}
 <style>
-  /* Profile Image Styling */
   .nav-profile {
     cursor: pointer;
     position: relative;
@@ -13,7 +12,6 @@
     border-radius: 50%;
   }
 
-  /* Dropdown Menu Styling */
   .dropdown-menu.profile {
     display: none; /* Initially hidden */
     position: absolute;
@@ -61,7 +59,6 @@
     const dropdownMenu = document.querySelector(".dropdown-menu.profile");
 
     profileLink.addEventListener("click", function (event) {
-      event.preventDefault();
       dropdownMenu.classList.toggle("show");
     });
 
@@ -85,7 +82,6 @@
   </div>
   <div class="site-mobile-menu-body"></div>
 </div>
-<!-- .site-mobile-menu -->
 
 <div class="site-navbar-wrap js-site-navbar bg-white">
   <div class="container">
@@ -104,16 +100,31 @@
                   </a>
                 </div>
                 <ul class="site-menu js-clone-nav d-none d-lg-block">
-                  <li class="active"><a href="/">Trang chủ</a></li>
-                  <li><a href="room">Phòng</a></li>
-                  <li><a href="event">Sự kiện</a></li>
-                  <li><a href="service">Dịch vụ</a></li>
+                  <li class="active"><a href="{% url 'home' %}">Trang chủ</a></li>
+                  <li class="has-children">
+                    <a href="{% url 'room_list' %}">Phòng</a>
+                    <ul class="dropdown arrow-top">
+                      <li><a href="{% url 'rooms_by_type' 'suite' %}">Tiêu chuẩn</a></li>
+                      <li><a href="{% url 'rooms_by_type' 'standard' %}">Thượng hạng</a></li>
+                      <li><a href="{% url 'rooms_by_type' 'deluxe' %}">Sang trọng</a></li>
+                    </ul>
+                  </li>
+                  <li class="has-children">
+                    <a href="{% url 'event' %}">Sự kiện</a>
+                    <ul class="dropdown arrow-top">
+                      <li><a href="{% url 'event' %}">Tin tức</a></li>
+                      <li><a href="{% url 'gift' %}">Ưu đãi</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="{% url 'service' %}">Dịch vụ</a></li>
                 </ul>
+                
               </div>
             </nav>
           </div>
 
           <div class="col-2">
+            {% if user.is_authenticated %}
             <div class="nav-profile">
               <a class="d-flex align-items-center" href="#">
                 <img
@@ -123,23 +134,19 @@
                 />
                 <span class="d-none d-md-block ps-2">Hồ sơ</span>
               </a>
-              <!-- Dropdown Menu -->
               <ul class="dropdown-menu profile">
                 <li>
-                  <form
-                    method="post"
-                    action="{% url 'admin:logout' %}"
-                    class="logout-form dropdown-item d-flex align-items-center p-15"
-                  >
-                    <i class="bi bi-box-arrow-right"></i>
-                    {% csrf_token %}
-                    <button type="submit" class="logout-button">Logout</button>
-                  </form>
+                  <a class="dropdown-item d-flex align-items-center" href="{% url 'logout' %}">Logout</a>
                 </li>
               </ul>
-              <!-- End Dropdown Menu -->
             </div>
+            {% else %}
+            <div>
+              <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+            </div>
+            {% endif %}
           </div>
+          
         </div>
       </div>
     </div>

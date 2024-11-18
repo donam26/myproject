@@ -219,17 +219,8 @@
       var FB_nb_day_delay = 0;
     </script>
 
-    <style>
-      html {
-        margin-top: 0px !important;
-      }
-      * html body {
-        margin-top: 0px !important;
-      }
-    </style>
-    <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+ 
+
     <script no-loader>
       /* Added by mu-plugin gmaps_keys_api_client.php */ var fb__website_gmap_api_key =
         "AIzaSyDDOq-l9r24XkM_GUqTDrlWyDAGWOs22xE";
@@ -515,14 +506,55 @@
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
     <link rel="dns-prefetch" href="//websdk.fastbooking-services.com" />
-    
+
     <style id="global-styles-inline-css" type="text/css">
       .site-navbar-wrap {
         z-index: 9000 !important;
       }
-      
+        html {
+          margin-top: 0px !important;
+        }
+        * html body {
+          margin-top: 0px !important;
+        }
+        body {
+          background-color: #eee;
+        }
+  
+        .bdge {
+          height: 21px;
+          background-color: orange;
+          color: #fff;
+          font-size: 11px;
+          padding: 8px;
+          border-radius: 4px;
+          line-height: 3px;
+        }
+  
+        .comments {
+          text-decoration: underline;
+          text-underline-position: under;
+          cursor: pointer;
+        }
+  
+        .dot {
+          height: 7px;
+          width: 7px;
+          margin-top: 3px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+        }
+  
+        .hit-voting:hover {
+          color: blue;
+        }
+  
+        .hit-voting {
+          cursor: pointer;
+        }
     </style>
-     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" />
     <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}" />
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />
@@ -591,7 +623,7 @@
       src="https://hanoihotel.com.vn/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.2"
       id="jquery-ui-datepicker-js"
     ></script>
-   
+
     <script
       type="text/javascript"
       src="https://hanoihotel.com.vn/wp-content/themes/pro-theme-munich/js/libraries.min.js#loaddefer"
@@ -612,7 +644,7 @@
       href="https://hanoihotel.com.vn/vi/wp-json/wp/v2/pages/33"
     />
     <link rel="shortlink" href="https://hanoihotel.com.vn/vi/?p=33" />
-   
+
     <link
       rel="icon"
       href="https://hanoihotel.com.vn/wp-content/uploads/sites/97/2020/09/cropped-Logo-Hanoihotel-32x32.png"
@@ -635,7 +667,7 @@
   <body
     class="page-template page-template-template-rooms page-template-template-rooms-php page page-id-33 page-parent rooms default"
   >
-  {% include 'includes/header.html' %}
+    {% include 'includes/header.html' %}
 
     <div
       class="slideshow_container page-template page-template-template-rooms page-template-template-rooms-php page page-id-33 page-parent rooms default"
@@ -715,6 +747,9 @@
         </script>
         <div class="loading_sshow"></div>
         <style type="text/css">
+          .center {
+            text-align: center;
+          }
           @media only screen and (min-width: 1200px) {
             .loading_sshow {
               background-image: url(https://hanoihotel.com.vn/wp-content/uploads/sites/97/2020/04/hanoi-hotel18959.jpg);
@@ -752,284 +787,7 @@
       </div>
       <!-- Submenu pages -->
     </div>
-    <div id="booking_form_wrap" class="booking_form_wrap none clearfix">
-      <div id="booking_form_box" class="booking_form_box clearfix">
-        <div id="booking_form" class="clearfix">
-          <a class="close_booking" href="javascript:void(0)"></a>
-          <div class="booking_form clearfix">
-            <form target="dispoprice" name="idForm" class="" id="idForm">
-              <input type="hidden" name="language" value="vi" />
-              <input type="hidden" name="locale" value="vi_VN" />
-              <input type="hidden" name="Clusternames" value="" />
-              <input type="hidden" name="Hotelnames" value="ASIAVNHTLHanoi" />
-              <input type="hidden" name="showPromotions" value="" />
-              <!--  dates fields -->
-              <input type="hidden" name="frommonth" value="" />
-              <input type="hidden" name="fromday" value="" />
-              <input type="hidden" name="fromyear" value="" />
-              <input type="hidden" name="tomonth" value="" />
-              <input type="hidden" name="today" value="" />
-              <input type="hidden" name="toyear" value="" />
-              <!-- adults and rooms -->
-              <input type="hidden" name="adulteresa" value="" />
-              <div class="bf_title">Book Now</div>
-              <div class="fields_box clearfix">
-                <div class="left_col">
-                  <!--  datepicker container -->
-                  <div id="inline-datepicker-box">
-                    <div id="inline-datepicker"></div>
-                  </div>
-                </div>
-                <div class="right_col">
-                  <div class="field_box dates clearfix">
-                    <div class="date date_arrival">
-                      <label>Check-in</label>
-                      <span class="arrival">14 November 2024</span>
-                    </div>
-                  </div>
-                  <div class="field_box dates clearfix">
-                    <div class="date date_departure">
-                      <label>Check-out</label>
-                      <span class="departure">15 November 2024</span>
-                    </div>
-                  </div>
-                  <div class="field_box dates nights clearfix">
-                    <div class="date box_nights">
-                      <label>
-                        <span class="singular">night</span>
-                        <span class="plural">nights</span>
-                      </label>
-                      <span class="n_nights">1</span>
-                    </div>
-                  </div>
-                  <div class="field_box section-nb_adults clearfix">
-                    <label for="adulteresa" class="bf_nb-adults">Adults</label>
-                    <select
-                      name="adulteresa"
-                      id="adulteresa"
-                      class="bf_select-adults"
-                      title="adulteresa"
-                    >
-                      <option value="1">1</option>
-                      <option value="2" selected="selected">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                  </div>
 
-                  <div class="field_box section-children clearfix">
-                    <label for="enfantresa" class="bf_nb-children">
-                      <span class="plural">Children</span>
-                    </label>
-                    <select
-                      name="enfantresa"
-                      id="enfantresa"
-                      class="bf_select-children"
-                      title="enfantresa"
-                    >
-                      <option value="0">0</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                    </select>
-                  </div>
-
-                  <div class="field_box promo_box">
-                    <label for="AccessCode">Promo Code</label>
-                    <input
-                      class="bf_input-iata"
-                      id="AccessCode"
-                      name="AccessCode"
-                      value=""
-                      autocomplete="off"
-                      type="text"
-                    />
-                  </div>
-                  <div class="field_box book_box">
-                    <input
-                      class="bf_submit button"
-                      name="bf_submit"
-                      id="bf_submit"
-                      type="button"
-                      value="Book a room"
-                    />
-                  </div>
-                  <div class="field_box cancel_box">
-                    <a href="javascript:void(0)" class="cancel_booking"
-                      >Cancel a booking</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </form>
-            <!-- idForm -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="sidebar_overlay" class="overlay"></div>
-    <div id="sidebar">
-      <div class="sidebar_content">
-        <a href="javascript:void(0)" class="close">&nbsp;</a>
-        <a href="https://hanoihotel.com.vn/vi/" id="logo_mobile">
-          <img
-            src="https://hanoihotel.com.vn/wp-content/uploads/sites/97/2020/09/Logo-Hanoihotel.png"
-            alt="Hanoi Hotel"
-          />
-        </a>
-        <div class="select_languages">
-          <label for="mobile_langs">Select a language</label>
-          <select
-            name="mobile_langs"
-            id="mobile_langs"
-            onchange="if (this.value) window.location.href=this.value"
-          >
-            <option value="https://hanoihotel.com.vn/accommodation/">
-              English
-            </option>
-            <option
-              value="https://hanoihotel.com.vn/vi/accommodation/"
-              selected="selected"
-            >
-              Tiếng Việt
-            </option>
-          </select>
-        </div>
-        <div id="sidebar_menu">
-          <div class="menu-primary-container">
-            <ul id="menu-primary-1" class="menu">
-              <li
-                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-125"
-              >
-                <a href="https://hanoihotel.com.vn/vi/"
-                  >Welcome to Hanoi Hotel</a
-                >
-              </li>
-              <li
-                class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-33 current_page_item menu-item-has-children menu-item-39"
-              >
-                <a
-                  href="https://hanoihotel.com.vn/vi/accommodation/"
-                  aria-current="page"
-                  >HẠNG PHÒNG</a
-                >
-                <ul class="sub-menu">
-                  <li
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"
-                  >
-                    <a
-                      href="https://hanoihotel.com.vn/vi/accommodation/deluxe-room/"
-                      >Phòng Deluxe</a
-                    >
-                  </li>
-                  <li
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"
-                  >
-                    <a
-                      href="https://hanoihotel.com.vn/vi/accommodation/premium-deluxe/"
-                      >Phòng Premium Deluxe</a
-                    >
-                  </li>
-                  <li
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"
-                  >
-                    <a
-                      href="https://hanoihotel.com.vn/vi/accommodation/premium-executive-suite/"
-                      >Phòng Premium Executive Suite</a
-                    >
-                  </li>
-                  <li
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"
-                  >
-                    <a
-                      href="https://hanoihotel.com.vn/vi/accommodation/executive-suite/"
-                      >Phòng Executive Suite</a
-                    >
-                  </li>
-                  <li
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"
-                  >
-                    <a
-                      href="https://hanoihotel.com.vn/vi/accommodation/premium-room/"
-                      >Phòng Premium</a
-                    >
-                  </li>
-                  <li
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"
-                  >
-                    <a
-                      href="https://hanoihotel.com.vn/vi/accommodation/junior-suite/"
-                      >Phòng Junior Suite</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li
-                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-118"
-              >
-                <a href="https://hanoihotel.com.vn/vi/dining/">ẨM THỰC</a>
-                <ul class="sub-menu">
-                  <li
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119"
-                  >
-                    <a
-                      href="https://hanoihotel.com.vn/vi/dining/dynasty-restaurant/"
-                      >Nhà Hàng Hoàng Triều</a
-                    >
-                  </li>
-                  <li
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"
-                  >
-                    <a
-                      href="https://hanoihotel.com.vn/vi/dining/golden-dragon-restaurant/"
-                      >Nhà Hàng Kim Long</a
-                    >
-                  </li>
-                  <li
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319"
-                  >
-                    <a href="https://hanoihotel.com.vn/vi/dining/food-centre/"
-                      >Food Centre</a
-                    >
-                  </li>
-                  <li
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-318"
-                  >
-                    <a href="https://hanoihotel.com.vn/vi/dining/lobby-lounge/"
-                      >LOBBY LOUNGE</a
-                    >
-                  </li>
-                  <li
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-440"
-                  >
-                    <a
-                      href="https://hanoihotel.com.vn/vi/dining/in-room-dining/"
-                      >In-room Dining</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li
-                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69"
-              >
-                <a href="https://hanoihotel.com.vn/vi/facilities/">TIỆN NGHI</a>
-              </li>
-              <li
-                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-121"
-              >
-                <a href="https://hanoihotel.com.vn/vi/meetings-events/"
-                  >HỘI NGHỊ &amp; SỰ KIỆN</a
-                >
-              </li>
-              <li
-                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"
-              >
-                <a href="https://hanoihotel.com.vn/vi/location/">LOCATION</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
     <div id="mobile_bottom_bar" class="mobile_bottom_bar visible-xs visible-sm">
       <a id="main_book_mobile" class="main_book" href="javascript:void(0)">
         <span>Book a stay</span>
@@ -1050,8 +808,9 @@
         ></div>
         <div class="page_content_wrap with_thumbs">
           <div class="page_content">
-            <h1 class="the_title">HẠNG PHÒNG</h1>
-            <p>
+            <h1 class="the_title">{{ room.room_type }}</h1>
+            <h4 class="center">Giá phòng: {{ room.price_per_night }}</h4>
+            <p class="mb-5">
               Tọa lạc giữa lòng thủ đô sôi động và náo nhiệt, Khách sạn Hà Nội
               được đông đảo du khách trong nước và quốc tế biết đến với hệ thống
               phòng nghỉ sang trọng, tiện nghi kết hợp cùng phong cách bài trí
@@ -1062,49 +821,55 @@
           </div>
         </div>
       </div>
-    </main>
-    <!-- CHILDREN rooms -->
-    <div id="preview_rooms" class="section">
-      <div class="container-fluid">
-        <div class="row clearfix">
-          <div id="single_room_38" class="child_wrap clearfix websdk-room">
-            <a
-              id="thumb"
-              class="lazy"
-              href="https://hanoihotel.com.vn/vi/accommodation/deluxe-room/"
-              data-bg="https://hanoihotel.com.vn/wp-content/uploads/sites/97/2022/05/anh-1-1000x563.jpg"
-            ></a>
-            <div class="child_content_wrap">
-              <div class="child_content page_content">
-                <a
-                  class="title"
-                  href="https://hanoihotel.com.vn/vi/accommodation/deluxe-room/"
-                >
-                  Phòng Deluxe
-                </a>
-                <div class="occupancy">
-                  <span class="label">Maximum occupation:</span>
-                  <span class="text"
-                    ><span class="tot">2 People</span>
-                    <span class="det">(2 Adults / 1 Children)</span>
-                  </span>
+      <div class="container mt-5 mb-5">
+        <div class="d-flex justify-content-center row">
+            <div class="d-flex flex-column col-md-8">
+                <div class="coment-bottom bg-white p-2 px-4">
+                    {% if user.is_authenticated %}
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="d-flex flex-row add-comment-section mt-4 mb-4">
+                            <img
+                                class="img-fluid img-responsive rounded-circle mr-2"
+                                src="https://i.imgur.com/qdiP4DB.jpg"
+                                width="38"
+                            />
+                            <input
+                                type="text"
+                                name="content"
+                                class="form-control mr-3"
+                                placeholder="Add comment"
+                                required
+                            />
+                            <button class="btn btn-primary" type="submit">Comment</button>
+                        </div>
+                    </form>
+                    {% else %}
+                    <div class="alert alert-warning mt-4">
+                        You must <a href="{% url 'login' %}">log in</a> to post a comment.
+                    </div>
+                    {% endif %}
                 </div>
-                <div class="description">
-                  <p>
-                    Phòng Deluxe được thiết kế với phong cách bày trí tinh tế
-                    cùng hướng nhìn ra hồ Giảng Võ thơ mộng, yên tĩnh tạo cho
-                    Quý khách cảm giác thư&hellip;
-                  </p>
+    
+                <!-- Display Comments -->
+                {% for comment in comments %} 
+                <div class="commented-section mt-2">
+                    <div class="d-flex flex-row align-items-center commented-user">
+                        <h5 class="mr-2">{{ comment.author.username }}</h5>
+                        <span class="dot mb-1"></span>
+                        <span class="mb-1 ml-2">{{ comment.created_at|date:"F j, Y, g:i a" }}</span>
+                    </div>
+                    <div class="comment-text-sm">
+                        <span>{{ comment.content }}</span>
+                    </div>
                 </div>
-
-              </div>
+                {% endfor %}
             </div>
-          </div>
-        
         </div>
-      </div>
     </div>
-   
+    
+    </main>
+
     <div class="system">
       <script
         type="text/javascript"
@@ -1183,5 +948,4 @@
     </div>
   </body>
   {% include 'includes/footer.html' %}
-
 </html>

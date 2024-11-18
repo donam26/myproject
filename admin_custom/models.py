@@ -34,6 +34,7 @@ class Room(models.Model):
     price_per_night = models.DecimalField(max_digits=10, decimal_places=2)
     status = models.CharField(max_length=20, choices=ROOM_STATUS_CHOICES, default='available')
     image = models.ImageField(upload_to=get_image_upload_path_room, null=True, blank=True)
+    created_at_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"Room {self.room_number} - {self.room_type}"
@@ -56,6 +57,7 @@ class Service(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField()
     image = models.ImageField(upload_to=get_image_upload_path_service, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"{self.name} - {self.category}"
@@ -66,12 +68,18 @@ def get_image_upload_path_post(instance, filename):
     return os.path.join('service_images/', filename)  
 
 class Post(models.Model):
+    STATUS_CHOICES = [
+        ('pending', 'Chờ duyệt'),
+        ('approved', 'Đã duyệt'),
+        ('rejected', 'Từ chối'),
+    ]
     title = models.CharField(max_length=200)
     content = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     image = models.ImageField(upload_to=get_image_upload_path_post, null=True, blank=True)
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='pending')
 
     def __str__(self):
         return self.title
@@ -88,11 +96,19 @@ class Offer(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     discount_percentage = models.DecimalField(max_digits=5, decimal_places=2) 
+    image = models.ImageField(upload_to=get_image_upload_path_post, null=True, blank=True)
     start_date = models.DateField()
     end_date = models.DateField()
 
     def __str__(self):
         return f"{self.title} ({self.discount_percentage}% off)"
+    class Meta:
+        permissions = [
+            ("can_view_offer", "Can view offer"),
+            ("can_create_offer", "Can create offer"),
+            ("can_edit_offer", "Can edit offer"),
+            ("can_delete_offer", "Can delete offer"),
+        ]    
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")

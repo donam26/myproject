@@ -37,6 +37,9 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ========================================================     -->
+  .created-column {
+    width: 150px; /* Hoặc điều chỉnh theo ý bạn */
+  }
   </head>
 
   <body>
@@ -119,6 +122,7 @@
                     <th>Giá Phòng Mỗi Đêm</th>
                     <th>Trạng Thái</th>
                     <th>Ảnh Phòng</th> 
+                    <th class="created-column">Ngày tạo</th>
                     <th>Hành Động</th>
                   </tr>
                 </thead>
@@ -136,6 +140,8 @@
                             <img src="{% static 'images/img_2.jpg' %}" alt="Room Image" width="100">
                         {% endif %}
                     </td>
+                    <td>{{ room.created_at_date|date:"d-m-Y H:i" }}</td>
+
                     <td>
                       <!-- Nút Sửa -->
                       <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editRoomModal{{ room.id }}">Sửa</button>

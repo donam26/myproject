@@ -78,6 +78,10 @@
                                     <label for="endDate" class="form-label">Ngày kết thúc</label>
                                     <input type="date" class="form-control" id="endDate" name="end_date" required />
                                 </div>
+                                <div class="mb-3">
+                                    <label for="offerImage" class="form-label">Ảnh</label>
+                                    <input type="file" class="form-control" id="offerImage" name="image">
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
@@ -103,6 +107,7 @@
                                     <th>Tiêu đề</th>
                                     <th>Mô tả</th>
                                     <th>Giảm giá %</th>
+                                    <th>Ảnh</th>
                                     <th>Ngày bắt đầu</th>
                                     <th>Ngày kết thúc</th>
                                     <th>Hành động</th>
@@ -114,6 +119,13 @@
                                         <td>{{ offer.title }}</td>
                                         <td>{{ offer.description }}</td>
                                         <td>{{ offer.discount_percentage }}</td>
+                                        <td>
+                                            {% if offer.image %}
+                                                <img src="{{ offer.image.url }}" alt="Offer Image" width="100">
+                                            {% else %}
+                                                <img src="{% static 'images/default_offer.jpg' %}" alt="Default Image" width="100">
+                                            {% endif %}
+                                        </td>
                                         <td>{{ offer.start_date }}</td>
                                         <td>{{ offer.end_date }}</td>
                                         <td>
@@ -157,6 +169,14 @@
                                                             <label class="form-label">Ngày kết thúc</label>
                                                             <input type="date" class="form-control" name="end_date" value="{{ offer.end_date }}" required />
                                                         </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Ảnh</label>
+                                                            <input type="file" class="form-control" name="image">
+                                                            {% if offer.image %}
+                                                                <img src="{{ offer.image.url }}" alt="Offer Image" class="mt-2" width="100">
+                                                            {% endif %}
+                                                        </div>
+                                                        
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>

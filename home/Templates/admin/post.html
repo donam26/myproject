@@ -29,6 +29,9 @@
 
     <!-- Template Main CSS File -->
     <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
+    .created-column {
+        width: 150px; /* Hoặc điều chỉnh theo ý bạn */
+      }
 </head>
 
 <body>
@@ -37,13 +40,13 @@
 
     <main id="main" class="main">
         <div class="pagetitle">
-            <h1>Posts</h1>
+            <h1>Bài viết</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                        <a href="index.html">Home</a>
+                        <a href="index.html">Trang chủ</a>
                     </li>
-                    <li class="breadcrumb-item active">Posts</li>
+                    <li class="breadcrumb-item active">Bài viết</li>
                 </ol>
             </nav>
         </div>
@@ -54,28 +57,28 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Create New Post</h5>
+                            <h5 class="modal-title">Tạo bài viết</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <form method="POST" enctype="multipart/form-data" id="createPostForm">
                             {% csrf_token %}
                             <div class="modal-body">
                                 <div class="mb-3">
-                                    <label for="postTitle" class="form-label">Post Title</label>
+                                    <label for="postTitle" class="form-label">Tiêu đề</label>
                                     <input type="text" class="form-control" id="postTitle" name="title" required />
                                 </div>
                                 <div class="mb-3">
-                                    <label for="postContent" class="form-label">Content</label>
+                                    <label for="postContent" class="form-label">Nội dung</label>
                                     <textarea class="form-control" id="postContent" name="content" rows="3" required></textarea>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="postImage" class="form-label">Post Image</label>
+                                    <label for="postImage" class="form-label">Hình ảnh</label>
                                     <input type="file" class="form-control" id="postImage" name="image" />
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Create Post</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                <button type="submit" class="btn btn-primary">Tạo</button>
                             </div>
                         </form>
                     </div>
@@ -87,18 +90,20 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
-                            <h5 class="card-title">Post List</h5>
-                            <button type="button" style="margin-top:10px;width:105px;height:42px" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createPostModal">Add New</button>
+                            <h5 class="card-title">Danh sách</h5>
+                            <button type="button" style="margin-top:10px;width:105px;height:42px" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createPostModal">Thêm mới</button>
                         </div>
                         <!-- Default Table -->
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Title</th>
-                                    <th>Author</th>
-                                    <th>Content</th>
-                                    <th>Image</th> 
-                                    <th>Actions</th>
+                                    <th>Tiêu đề</th>
+                                    <th>Người đăng</th>
+                                    <th>Nội dung</th>
+                                    <th>Hình ảnh</th> 
+                                    <th>Trạng Thái</th>
+                                    <th class="created-column">Ngày tạo</th>
+                                    <th>Hành động</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -114,14 +119,22 @@
                                                 <img src="{% static 'images/default_post.jpg' %}" alt="Default Image" width="100">
                                             {% endif %}
                                         </td>
+                                            <td>
+                                                {% if post.status == 'approved' %}
+                                                <span class="badge bg-success">Đã duyệt</span>
+                                                {% else %}
+                                                <span class="badge bg-warning">Chờ duyệt</span>
+                                                {% endif %}
+                                            </td>
+                                        <td>{{ post.created_at|date:"d-m-Y H:i" }}</td>
                                         <td>
                                             <!-- Edit Button -->
-                                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPostModal{{ post.id }}">Edit</button>
+                                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPostModal{{ post.id }}">Sửa</button>
 
                                             <!-- Delete Button -->
                                             <form method="POST" action="{% url 'delete_post' post.id %}" style="display:inline;">
                                                 {% csrf_token %}
-                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                                <button type="submit" class="btn btn-danger">Xóa</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -129,28 +142,35 @@
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title">Edit Post</h5>
+                                                    <h5 class="modal-title">Sửa bài viết</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <form method="POST" enctype="multipart/form-data" action="{% url 'edit_post' post.id %}">
                                                     {% csrf_token %}
                                                     <div class="modal-body">
                                                         <div class="mb-3">
-                                                            <label for="postTitle" class="form-label">Post Title</label>
+                                                            <label for="postTitle" class="form-label">Tiêu đề</label>
                                                             <input type="text" class="form-control" name="title" value="{{ post.title }}" required />
                                                         </div>
                                                         <div class="mb-3">
-                                                            <label for="postContent" class="form-label">Content</label>
+                                                            <label for="postContent" class="form-label">Nội dung</label>
                                                             <textarea class="form-control" name="content" rows="3" required>{{ post.content }}</textarea>
                                                         </div>
                                                         <div class="mb-3">
-                                                            <label for="postImage" class="form-label">Post Image</label>
+                                                            <label for="postImage" class="form-label">Hình ảnh </label>
                                                             <input type="file" class="form-control" name="image" />
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="postStatus" class="form-label">Trạng thái</label>
+                                                            <select class="form-control" name="status" required>
+                                                                <option value="pending" {% if post.status == 'pending' %}selected{% endif %}>Chờ duyệt</option>
+                                                                <option value="approved" {% if post.status == 'approved' %}selected{% endif %}>Đã duyệt</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                                        <button type="submit" class="btn btn-primary">Lưu</button>
                                                     </div>
                                                 </form>
                                             </div>
