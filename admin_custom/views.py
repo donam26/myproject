@@ -6,21 +6,55 @@ from django.contrib import messages
 from django.contrib.auth.models import User 
 from .models import Employee, Room, Service, Post, Offer, Comment
 from django.contrib.auth.decorators import permission_required
+from django.contrib.auth.models import Permission
 
 
 # Create your views here.
 
 @login_required
 def admin_dashboard(request):
-    return render(request, 'admin/home.html')
+    total_posts = Post.objects.count()
+    total_employees = Employee.objects.count()
+    total_rooms = Room.objects.count()
+    total_services = Service.objects.count()
+    total_offers = Offer.objects.count()
+    context = {
+        'total_posts': total_posts,
+        'total_employees': total_employees,
+        'total_rooms': total_rooms,
+        'total_services': total_services,
+        'total_offers': total_offers,
+    }
+    return render(request, 'admin/home.html', context)
 @login_required
 def admin_customer(request):
     employees = Employee.objects.all()
     return render(request, 'admin/customer.html', {'employees': employees})
-@login_required
+
+@permission_required('auth.change_user', raise_exception=True)  # Yêu cầu quyền chỉnh sửa người dùng
 def admin_employee(request):
     employees = Employee.objects.all()
-    return render(request, 'admin/employee.html', {'employees': employees})
+
+    if request.method == "POST":
+        # Xử lý cập nhật quyền
+        user_id = request.POST.get("user_id")
+        permission_codename = request.POST.get("permission")
+        action = request.POST.get("action")
+        
+        user = get_object_or_404(User, id=user_id)
+        permission = Permission.objects.get(codename=permission_codename)
+
+        if action == "add":
+            user.user_permissions.add(permission)
+            messages.success(request, f"Đã thêm quyền '{permission_codename}' cho {user.username}.")
+        elif action == "remove":
+            user.user_permissions.remove(permission)
+            messages.success(request, f"Đã xóa quyền '{permission_codename}' của {user.username}.")
+
+        return redirect("manage_employees")
+
+    return render(request, "admin/employee.html", {"employees": employees})
+
 @login_required
 def admin_room(request):
     if request.method == 'POST':
@@ -230,4 +264,10 @@ def edit_gift(request, gift_id):
         messages.success(request, 'Offer has been updated successfully.')
         return redirect('admin_gift')
 
-
+@login_required
+@permission_required('auth.delete_user', raise_exception=True)
+def delete_employee(request, employee_id):
+    employee = get_object_or_404(Employee, id=employee_id)
+    employee.user.delete()  # Xóa user liên kết với nhân viên
+    messages.success(request, "Nhân viên đã được xóa thành công.")
+    return redirect("manage_employees")

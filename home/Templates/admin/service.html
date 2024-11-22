@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Dashboard - NiceAdmin Bootstrap Template</title>
+    <title>Dashboard Admin</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
@@ -130,13 +130,6 @@
                             <img src="{{ service.image.url }}" alt="Service Image" width="100">
                         {% else %}
                             <img src="{% static 'images/default_service.jpg' %}" alt="Service Image" width="100">
-                        {% endif %}
-                      </td>
-                      <td>
-                        {% if service.status == 'approved' %}
-                          <span class="badge bg-success">Approved</span>
-                        {% else %}
-                          <span class="badge bg-warning">Pending</span>
                         {% endif %}
                       </td>
                       <td>{{ service.created_at|date:"d-m-Y H:i" }}</td>
