@@ -30,6 +30,7 @@ urlpatterns = [
     path('service', home.get_service, name='service'),
     path('about', home.get_about, name='about'),
     path('event', home.get_event, name='event'),
+    path('event/<int:id>/', home.event_detail, name='event_detail'),
     path('gift', home.get_gift, name='gift'),
     path('room', home.get_room, name='room_list'),
     # path('room/suite', home.get_room_suite, name='room_list_suite'),

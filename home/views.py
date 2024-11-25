@@ -124,3 +124,7 @@ def user_logout(request):
     except Exception as e:
         pass  # Hoặc ghi log nếu cần
     return redirect('home')
+
+def event_detail(request, id):
+    event = get_object_or_404(Post, id=id)
+    return render(request, 'event_detail.html', {'event': event})
