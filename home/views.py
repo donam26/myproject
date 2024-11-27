@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect , get_object_or_404
-from admin_custom.models import Room, Post, Service, Comment, Offer
+from admin_custom.models import Room, Post, Service, Comment, Offer, CommentPost
 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login  
@@ -126,5 +126,24 @@ def user_logout(request):
     return redirect('home')
 
 def event_detail(request, id):
+    # Lấy thông tin sự kiện
     event = get_object_or_404(Post, id=id)
-    return render(request, 'event_detail.html', {'event': event})
+    # Lấy danh sách bình luận theo thứ tự mới nhất trước
+    comments = CommentPost.objects.filter(post=event).order_by('-created_at')
+
+    if request.method == "POST":
+        # Nếu người dùng đã gửi bình luận
+        if not request.user.is_authenticated:
+            return redirect('login')
+
+        content = request.POST.get('content')  # Lấy nội dung bình luận từ form
+        if content:
+            # Tạo bình luận mới
+            CommentPost.objects.create(
+                post=event,
+                author=request.user,
+                content=content
+            )
+            return redirect('event_detail', id=id)  # Làm mới trang sau khi thêm bình luận
+
+    return render(request, 'event_detail.html', {'event': event, 'comments': comments})
